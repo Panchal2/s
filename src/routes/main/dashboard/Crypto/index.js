@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Col, Row, Card, Button, Icon} from "antd";
+import {Col, Row} from "antd";
 
 import LineIndicator from "components/dashboard/CRM/LineIndicator";
 import Auxiliary from "util/Auxiliary";

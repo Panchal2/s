@@ -1,7 +1,7 @@
 import React from "react";
-import {Avatar, Input, Modal, Select} from "antd";
+import { Input, Modal, Select} from "antd";
 
-import IntlMessages from "util/IntlMessages";
+// import IntlMessages from "util/IntlMessages";
 
 class AddVisit extends React.Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class AddVisit extends React.Component {
 
   render() {
     const Option = Select.Option;
-    const {onSaveVisit, onVisitClose, open, contact} = this.props;
+    const {onSaveVisit, onVisitClose, open} = this.props;
     const {id, dni, company_name, host_name, procedure} = this.state;
     return (
       <Modal title="Add Visit"

@@ -43,12 +43,7 @@ import {
                 status : 'Initial',
             }
         }
-        case GET_STATUS_INITIAL:
-            {
-                return{
-                    ...state,
-                }
-            }
+        
         default:
             return state;
     }

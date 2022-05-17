@@ -3,31 +3,30 @@ import {useSelector} from "react-redux";
 import {Menu} from "antd";
 import {Link} from "react-router-dom";
 
-import {
+// import {
 
-  NAV_STYLE_BELOW_HEADER,
-} from "../../constants/ThemeSetting";
+//   NAV_STYLE_BELOW_HEADER,
+// } from "../../constants/ThemeSetting";
 
 
-const SubMenu = Menu.SubMenu;
-const MenuItemGroup = Menu.ItemGroup;
+
 
 const HorizontalNav = () => {
 
-  const navStyle = useSelector(({settings}) => settings.navStyle);
+
   const pathname = useSelector(({settings}) => settings.pathname);
 
-  const getNavStyleSubMenuClass = (navStyle) => {
-    switch (navStyle) {
+  // const getNavStyleSubMenuClass = (navStyle) => {
+  //   switch () {
     
-      case NAV_STYLE_BELOW_HEADER:
-        return "gx-menu-horizontal gx-submenu-popup-curve gx-below-submenu-popup-curve";
+  //     case NAV_STYLE_BELOW_HEADER:
+  //       return "gx-menu-horizontal gx-submenu-popup-curve gx-below-submenu-popup-curve";
       
-      default:
-        return "gx-menu-horizontal gx-submenu-popup-curve gx-below-submenu-popup-curve";
+  //     default:
+  //       return "gx-menu-horizontal gx-submenu-popup-curve gx-below-submenu-popup-curve";
 
-    }
-  };
+  //   }
+  // };
 
   const selectedKeys = pathname.substr(1);
   const defaultOpenKeys = selectedKeys.split('/')[1];

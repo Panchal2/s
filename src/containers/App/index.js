@@ -17,11 +17,9 @@ import {
   LAYOUT_TYPE_BOXED,
   LAYOUT_TYPE_FRAMED,
   LAYOUT_TYPE_FULL,
-  NAV_STYLE_ABOVE_HEADER,
-  NAV_STYLE_BELOW_HEADER,
-  NAV_STYLE_DARK_HORIZONTAL,
-  NAV_STYLE_DEFAULT_HORIZONTAL,
-  NAV_STYLE_INSIDE_HEADER_HORIZONTAL
+  
+  NAV_STYLE_BELOW_HEADER
+ 
 } from "../../constants/ThemeSetting";
 
 const RestrictedRoute = ({component: Component, location, authUser, ...rest}) =>

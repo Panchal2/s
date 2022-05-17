@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Card, Icon, Table, Button, Col, Row} from "antd";
+import {Card,  Table, Button} from "antd";
 
 import EmployeeCheck from "components/modal/EmployeeCheck";
 

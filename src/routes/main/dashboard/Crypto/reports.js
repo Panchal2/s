@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Card, Divider, Icon, Table, Button, Col, Row, Select, Input, DatePicker} from "antd";
+import {Card, Table, Button, Select, Input, DatePicker} from "antd";
 
 const Option = Select.Option;
 const columns = [
@@ -165,9 +165,9 @@ class Reports extends Component {
 
   render() {
     const {startValue, endValue, endOpen} = this.state;
-    function handleChange(value) {
-      console.log(`selected ${value}`);
-    }
+    // function handleChange(value) {
+    //   console.log(`selected ${value}`);
+    // }
     return (
       <Card title="Statistics">
         <Input className="inline-inputs"/>

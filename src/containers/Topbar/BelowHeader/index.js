@@ -1,7 +1,7 @@
-import React, {useState} from "react";
-import { Layout, message, Popover, Select} from 'antd';
+import React from "react";
+import { Layout, Popover} from 'antd';
 import {useDispatch, useSelector} from "react-redux";
-import CustomScrollbars from "util/CustomScrollbars";
+// import CustomScrollbars from "util/CustomScrollbars";
 import UserInfo from "components/UserInfo";
 import AppNotification from "components/AppNotification";
 import { toggleCollapsedSideNav} from "../../../appRedux/actions/Setting";
@@ -14,18 +14,18 @@ const BelowHeader = () => {
 
   const dispatch = useDispatch();
 
-  const [ setSearchText] = useState('');
-  const locale = useSelector(({settings}) => settings.locale);
+  // const [ setSearchText] = useState('');
+  // const locale = useSelector(({settings}) => settings.locale);
   const navCollapsed = useSelector(({settings}) => settings.navCollapsed);
 
-  const languageMenu = () => (
-    <CustomScrollbars className="gx-popover-lang-scroll">
+  // const languageMenu = () => (
+  //   <CustomScrollbars className="gx-popover-lang-scroll">
      
-    </CustomScrollbars>);
+  //   </CustomScrollbars>);
 
-  const updateSearchChatUser = (evt) => {
-    setSearchText(evt.target.value)
-  };
+  // const updateSearchChatUser = (evt) => {
+  //   setSearchText(evt.target.value)
+  // };
 
   return (
     <div className="gx-header-horizontal gx-header-horizontal-dark gx-below-header-horizontal">

@@ -1,7 +1,7 @@
 import {all, call, fork, put, takeEvery} from "redux-saga/effects";
 import {baseURL} from './../../util/config';
 import axios from "axios";
-import {message} from "antd";
+// import {message} from "antd";
 import {
   ADMISSION_DETAIL
   } from "../../constants/ActionTypes";
