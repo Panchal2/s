@@ -50,9 +50,9 @@ console.log("data1",baseURL);
 
 
 function* Admissiondetails({payload}) {
-  const {collageName,branch,AdmisionType,name,Mo1,FMo1,EM0,Schoolname,District,CastCategory,Chk1,Bank1,Amount1,Chk2,Bank2,Amount2,ChkMo,Document,Formfee,Remark,Agent} = payload;
+  const {collageName,branch,AdmisionType,fname,Mo1,FMo1,EM0,Schoolname,District,CastCategory,Chk1,Bank1,Amount1,Chk2,Bank2,Amount2,ChkMo,Document,Formfee,Remark,Agent} = payload;
   try {
-    const adata = yield call(AdmissiondetailsRequest, collageName,branch,AdmisionType,name,Mo1,FMo1,EM0,Schoolname,District,CastCategory,Chk1,Bank1,Amount1,Chk2,Bank2,Amount2,ChkMo,Document,Formfee,Remark,Agent);
+    const adata = yield call(AdmissiondetailsRequest, collageName,branch,AdmisionType,fname,Mo1,FMo1,EM0,Schoolname,District,CastCategory,Chk1,Bank1,Amount1,Chk2,Bank2,Amount2,ChkMo,Document,Formfee,Remark,Agent);
     // if (adata.status) {
     
     //   yield put(getAdmissionSuccess(adata.data));
