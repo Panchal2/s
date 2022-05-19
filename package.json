@@ -36,6 +36,7 @@
     "react-flip-move": "^3.0.4",
     "react-google-maps": "^9.4.5",
     "react-hot-loader": "^4.12.18",
+    "react-html-table-to-excel": "^2.0.0",
     "react-instantsearch": "^6.1.0",
     "react-instantsearch-dom": "^6.1.0",
     "react-intl": "^3.9.3",
