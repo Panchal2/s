@@ -43,7 +43,7 @@ const HorizontalNav = () => {
               </Link>
           </Menu.Item>
 
-          <Menu.Item key="">
+          <Menu.Item key="/main/dashboard/identities">
               <Link to="">
                 <i className="icon icon-contacts"/>
                   Admission
