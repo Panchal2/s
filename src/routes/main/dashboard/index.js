@@ -23,6 +23,7 @@ const Dashboard = ({match}) => (
     <Route path={`${match.url}/addstaff`} component={asyncComponent(() => import('./Crypto/Addstaff'))}/>
     <Route path={`${match.url}/role-permission`} component={asyncComponent(() => import('./Crypto/Role_Permission'))}/>
     <Route path={`${match.url}/listing`} component={asyncComponent(() => import('./Listing/index'))}/> */}
+    <Route path={`${match.url}/search`} component={asyncComponent(() => import('./Crypto/search'))}/>
   </Switch>
 );
 

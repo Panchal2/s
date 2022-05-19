@@ -32,11 +32,11 @@ const Identity =(props) => {
     const handleSubmit = (e) => {
       e.preventDefault();
       props.form.validateFields((err, values) => {
-        dispatch(Get_admission(values));
+        
         console.log(values);
         if (!err) {
           // dispatch(showAuthLoader());
-         
+         dispatch(Get_admission(values));
         }
         else
         {
@@ -54,8 +54,8 @@ const Identity =(props) => {
             <Form onSubmit={handleSubmit} className="gx-signin-form gx-form-row0">
 
              <Row>
-               <Col lg={12}>
-                  <FormItem label="Collage">
+               <Col lg={12} md={24} sm={24} xs={24}>
+                  <FormItem label="College">
                       {getFieldDecorator('collageName', {
                       rules: [
                           {required: false, message: 'Please select your Collage!'},
@@ -63,13 +63,18 @@ const Identity =(props) => {
                       })(
                       <Select placeholder="SALITER">
                           <Option value="SALITER">SALITER</Option>
+                          <Option value="SETI">SETTY</Option>
                           <Option value="SCE">SCE</Option>
-                          <Option value="SETTY">SETTY</Option>
+                          <Option value="SIDS">SIDS</Option>
+                          <Option value="SSA">SSA</Option>
+                          <Option value="SID">SID</Option>
+                          <Option value="SIM">SIM</Option>
+                          <Option value="SSID">SSID</Option>
                       </Select>
                       )}
                   </FormItem>
                 </Col>
-                <Col lg={12}>
+                <Col lg={12} md={24} sm={24} xs={24}>
                   <FormItem label="Branch">
                       {getFieldDecorator('branch', {
                       rules: [
@@ -93,7 +98,7 @@ const Identity =(props) => {
                   </FormItem>
                 </Col>
               </Row>
-                <Col lg={24}>
+                <Col lg={24} md={24} sm={24} xs={24}>
                   
                   <FormItem label="Admission Type" >
                     {getFieldDecorator('AdmisionType', {
@@ -103,7 +108,7 @@ const Identity =(props) => {
                     })(
                             <RadioGroup>
                               <Radio value="Reguler">Reguler</Radio>
-                              <Radio value="D2D">D2D</Radio>
+                              <Radio value="DToD">DToD</Radio>
                             </RadioGroup>
                     )}
                   </FormItem>
@@ -112,7 +117,7 @@ const Identity =(props) => {
 <hr/>
 <Col><h3>Detail</h3></Col>
                 <Row>
-                  <Col lg={24}>
+                  <Col lg={24} md={24} sm={24} xs={24}>
                   <FormItem label="Name">
                     {getFieldDecorator('fname', {
                       initialValue: "",
@@ -127,7 +132,7 @@ const Identity =(props) => {
               </Row>
 
               <Row>
-                  <Col lg={8}>
+                  <Col lg={8} md={24} sm={24} xs={24}>
                   <FormItem label="Mobile number">
                     {getFieldDecorator('Mo1', {
                       initialValue: "",
@@ -135,10 +140,10 @@ const Identity =(props) => {
                         required: false, message: 'student Number ',
                       }],
                     })(
-                      <Input placeholder="Student number"/>
+                      <Input placeholder="Student"/>
                     )}
                   </FormItem></Col>
-                  <Col lg={8}>
+                  <Col lg={8} md={24} sm={24}>
                   <FormItem label="Parents Mobile number1">
                     {getFieldDecorator('FMo1', {
                       initialValue: "",
@@ -146,13 +151,13 @@ const Identity =(props) => {
                         required: false, message: 'Enter Parent Number ',
                       }],
                     })(
-                      <Input placeholder="Parent number"/>
+                      <Input placeholder="Parent /Gardian"/>
                     )}
                   </FormItem>
                   </Col>
             
     
-                  <Col lg={8}>
+                  <Col lg={8} md={24} sm={24} xs={24}>
                   <FormItem label="extra number">
                     {getFieldDecorator('EM0', {
                       initialValue: "",
@@ -160,13 +165,13 @@ const Identity =(props) => {
                         required:true, message: 'Enter extra  Mo.Number2',
                       }],
                     })(
-                      <Input placeholder="Extra MobileNumber"/>
+                      <Input placeholder="Other"/>
                     )}
                   </FormItem>
                   </Col>
               </Row>
               <Row>
-              <Col lg={12}>
+              <Col lg={12} md={24} sm={24} xs={24}>
                   <FormItem label="School Name">
                     {getFieldDecorator('Schoolname', {
                       initialValue: "",
@@ -178,29 +183,51 @@ const Identity =(props) => {
                     )}
                   </FormItem></Col>
 
-                  <Col lg={12}><FormItem label="District">
+                  <Col lg={12} md={24} sm={24} xs={24}><FormItem label="District">
                       {getFieldDecorator('District', {
                       rules: [
                           {required: false, message: 'Please select your District!'},
                       ],
                       })(
-                      <Select placeholder="District">
-                          <Option value="CL">CL</Option>
-                          <Option value="AUTO">AUTO</Option>
-                          <Option value="IC">IC</Option>
-                          <Option value="EC">EC</Option>
-                          <Option value="EE">EE</Option>
-                          <Option value="CSE">CSE</Option>
-                          <Option value="MECHA">MECHA</Option>
-                          <Option value="CHEM">CHEM</Option>
-                          <Option value="MECH">MECH</Option>
-                          <Option value="IT">IT</Option>
-                          <Option value="ICT">ICT</Option>
+                      <Select placeholder="District" >
+                          <Option value="Ahmedabad">Ahmedabad</Option>
+                          <Option value="Amreli">Amreli</Option>
+                          <Option value="Bhavnager">Bhavnager</Option>
+                          <Option value="Ghandhinager">Ghandhinager</Option>
+                          <Option value="Gir Somnath">Gir Somnath</Option>
+                          <Option value="Junagadh">Junagadh</Option>
+                          <Option value="Surendranager">Surendranager</Option>
+                          <Option value="Vadodara">Vadodara</Option>
+                          <Option value="Rajkot">Rajkot</Option>
+                          <Option value="Anand">Anand</Option>
+                          <Option value="Arvali">Arvali</Option>
+                          <Option value="Banashkantha(palanpur)">Banashkantha(palanpur)</Option>
+                          <Option value="Bharuch">Bharuch</Option>
+                          <Option value="Botad">Botad</Option>
+                          <Option value="Chhota Udepur">Chhota Udepur</Option>
+                          <Option value="Dahod">Dahod</Option>
+                          <Option value="Dangs">Dangs</Option>
+                          <Option value="Devbhoomi Dwarka">Devbhoomi Dwarka</Option>
+                          <Option value="Jamnager">Jamnager</Option>
+                          <Option value="Kachh">Kachh</Option>
+                          <Option value="Kheda">Kheda</Option>
+                          <Option value="Mahisagar">Mahisagar</Option>
+                          <Option value="Mahsana">Mahsana</Option>
+                          <Option value="Morbi">Morbi</Option>
+                          <Option value="Narmada">Narmada</Option>
+                          <Option value="Navsari">Navsari</Option>
+                          <Option value="Panchmahal">Panchmahal</Option>
+                          <Option value="Patan">Patan</Option>
+                          <Option value="Porbander">Porbander</Option>
+                          <Option value="Sabarkantha">Sabarkantha</Option>
+                          <Option value="Surat">Surat</Option>
+                          <Option value="Tapi">Tapi</Option>
+                          <Option value="Valsad">Valsad</Option>
                       </Select>
                       )}
                   </FormItem></Col>
                   </Row>
-                  <Col lg={24}>
+                  <Col lg={24} md={24} sm={24} xs={24}>
                   <FormItem label="Category">
                     {getFieldDecorator('CastCategory', {
                     rules: [
@@ -219,9 +246,9 @@ const Identity =(props) => {
                 </Col>
                       <hr/>
                   <Row>
-                    <Col lg={24}>Cheque Detail
+                    <Col lg={24} >Cheque Detail
                     <br/> cheque1</Col>
-                    <Col lg={8}>
+                    <Col lg={8} md={24} sm={24} xs={24}>
                       <FormItem >
                       {getFieldDecorator('Chk1', {
                         initialValue: "",
@@ -233,7 +260,7 @@ const Identity =(props) => {
                       )}
                       </FormItem>
                     </Col>
-                    <Col lg={8}>
+                    <Col lg={8} md={24} sm={24} xs={24}>
                     <FormItem >
                       {getFieldDecorator('Bank1', {
                         initialValue: "",
@@ -245,7 +272,7 @@ const Identity =(props) => {
                       )}
                       </FormItem>
                     </Col>
-                    <Col lg={8}>
+                    <Col lg={8} md={24} sm={24} xs={24}>
                     <FormItem >
                       {getFieldDecorator('Amount1', {
                         initialValue: "",
@@ -259,7 +286,7 @@ const Identity =(props) => {
                     </Col>
                     
                     <Col lg={24}>cheque2<br/></Col>
-                    <Col lg={8}>
+                    <Col lg={8} md={24} sm={24} xs={24}>
                       <FormItem >
                       {getFieldDecorator('Chk2', {
                         initialValue: "",
@@ -271,7 +298,7 @@ const Identity =(props) => {
                       )}
                       </FormItem>
                     </Col>
-                    <Col lg={8}>
+                    <Col lg={8} md={24} sm={24} xs={24}>
                     <FormItem >
                       {getFieldDecorator('Bank2', {
                         initialValue: "",
@@ -283,7 +310,7 @@ const Identity =(props) => {
                       )}
                       </FormItem>
                     </Col>
-                    <Col lg={8}>
+                    <Col lg={8} md={24} sm={24} xs={24}>
                     <FormItem >
                       {getFieldDecorator('Amount2', {
                         initialValue: "",
@@ -297,7 +324,7 @@ const Identity =(props) => {
                     </Col>
 
                     
-                    <Col lg={24}>
+                    <Col lg={24} md={24} sm={24} xs={24}>
                     <FormItem label="Check Mobile number">
                       {getFieldDecorator('ChkMo', {
                         initialValue: "",
@@ -319,7 +346,7 @@ const Identity =(props) => {
                   })(
                   <CheckboxGroup>
                     <Row>
-                    <Col lg={12}>
+                    <Col lg={12} md={24} sm={24} xs={24}>
                       <Checkbox value="Photo">Photo</Checkbox><br/>
                       <Checkbox value="Aadharcard">Aadharcard</Checkbox><br/>
                       <Checkbox value="SSC Marksheet">SSC Marksheet</Checkbox><br/>
@@ -327,7 +354,7 @@ const Identity =(props) => {
                       <Checkbox value="School LC">School LC</Checkbox><br/>
                       <Checkbox value="Transfer certificate/Migration Certificate">Transfer certificate/Migration Certificate</Checkbox>
                       </Col>
-                      <Col lg={12}>
+                      <Col lg={12} md={24} sm={24}>
                       <Checkbox value="MArksheet JEE/GUJCAT">MArksheet JEE/GUJCAT</Checkbox><br/>
                       <Checkbox value="Marksheet NATA ">Marksheet NATA</Checkbox><br/>
                       <Checkbox value="ACPC Registartion Copy">ACPC Registartion Copy</Checkbox><br/>
@@ -338,7 +365,7 @@ const Identity =(props) => {
               </FormItem>
              <Row>
              <hr/>
-             <Col lg={8}>
+             <Col lg={8} md={24} sm={24} xs={24}>
                     <FormItem label="Form fee">
                       {getFieldDecorator('Formfee', {
                         initialValue: "",
@@ -350,7 +377,7 @@ const Identity =(props) => {
                       )}
                       </FormItem>
                     </Col>
-                     <Col lg={7}>
+                     <Col lg={8} md={24} sm={24} xs={24}>
                     <FormItem label="Remark">
                       {getFieldDecorator('Remark', {
                         initialValue: "",
@@ -362,7 +389,7 @@ const Identity =(props) => {
                       )}
                       </FormItem>
                     </Col>
-                    <Col lg={8}>
+                    <Col lg={8} md={24} sm={24} xs={24}>
                     <FormItem label="Agent">
                     {getFieldDecorator('Agent', {
                     rules: [
@@ -384,7 +411,7 @@ const Identity =(props) => {
               <center>
               <FormItem >
                 <Button type="primary" className="gx-mb-0" htmlType="submit">
-                 submit
+                 Submit
                 </Button>
               
               </FormItem>

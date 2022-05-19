@@ -43,14 +43,14 @@ const HorizontalNav = () => {
               </Link>
           </Menu.Item>
 
-          <Menu.Item key="main/dashboard/search data">
+          <Menu.Item key="">
               <Link to="">
                 <i className="icon icon-contacts"/>
                   Admission
               </Link>
           </Menu.Item>
 
-          <Menu.Item key="main/dashboard/search data">
+          <Menu.Item key="">
               <Link to="">
                 <i className="icon icon-home"/>
                   Collage
