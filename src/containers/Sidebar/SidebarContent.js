@@ -67,6 +67,19 @@ const SidebarContent = () => {
                     <span>Admission</span>
                 </Link>
               </Menu.Item>
+              <Menu.Item key="main/dashboard/search">
+                <Link to="/main/dashboard/search">
+                  <i className="icon icon-search" />
+                    <span>Search</span>
+                </Link>
+              </Menu.Item>
+
+              <Menu.Item key="main/dashboard/dataexport">
+              <Link to="/main/dashboard/dataexport">
+                <i className="icon icon-transfer"/>
+                  Export
+              </Link>
+              </Menu.Item>
 
               {/* <SubMenu key="process" className={getNavStyleSubMenuClass(navStyle)}
                        title={<span>

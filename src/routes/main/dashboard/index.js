@@ -8,6 +8,8 @@ const Dashboard = ({match}) => (
     <Route path={`${match.url}/crm`} component={asyncComponent(() => import('./CRM/index'))}/>
     <Route path={`${match.url}/crypto`} component={asyncComponent(() => import('./Crypto/index'))}/>
     <Route path={`${match.url}/identities`} component={asyncComponent(() => import('./Crypto/identities'))}/>
+    <Route path={`${match.url}/search`} component={asyncComponent(() => import('./Crypto/search'))}/>
+    <Route path={`${match.url}/dataexport`} component={asyncComponent(() => import('./Crypto/dataexport'))}/>
     {/* <Route path={`${match.url}/visit`} component={asyncComponent(() => import('./Crypto/visit'))}/>
     <Route path={`${match.url}/employee-work-log`} component={asyncComponent(() => import('./Crypto/employee_work_log'))}/>
     <Route path={`${match.url}/procedure`} component={asyncComponent(() => import('./Crypto/procedure'))}/>

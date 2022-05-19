@@ -62,16 +62,16 @@ class Dashboard extends Component {
                         <h2 className="h4 gx-card-title">Overview</h2>
                         <ul className="gx-line-indicator">
                           <li>
-                            <LineIndicator width="25%" title="SALITER" color="purple" value="25%"/>
+                            <LineIndicator width="25%" title="SALITER" color="purple" value="25"/>
                           </li>
                           <li>
-                            <LineIndicator width="40%" title="SETI" color="green" value="40%"/>
+                            <LineIndicator width="40%" title="SETI" color="green" value="40"/>
                           </li>
                           <li>
-                            <LineIndicator width="28%" title="SCE" color="yellow" value="28%"/>
+                            <LineIndicator width="28%" title="SCE" color="yellow" value="28"/>
                           </li>
                           <li>
-                            <LineIndicator width="18%" title="Others" color="grey" value="18%"/>
+                            <LineIndicator width="18%" title="Others" color="grey" value="18"/>
                           </li>
                         </ul>
                       </div>
@@ -90,11 +90,15 @@ class Dashboard extends Component {
 
                             <div className="gx-revenu-col">
                               <h3>07</h3>
-                              <span className="gx-fs-sm">D2D</span>
+                              <span className="gx-fs-sm">DToD</span>
                             </div>
                           </div>
                         </div>
-                      </div>
+                        </div>
+
+                        
+                      
+                      
                       <div className="gx-map-col">
                       
                        
@@ -109,36 +113,36 @@ class Dashboard extends Component {
         </Row>
 
         <Row>
-          <Col xl={6} lg={12} md={12} sm={12} xs={24}>
+          <Col xl={6} lg={12} md={12} sm={12} xs={12}>
             <Widget styleName="gx-blue-cyan-gradient gx-text-white gx-card-1367-p">
               <div className="gx-flex-row gx-justify-content-between gx-mb-2">
                 <i className={`icon icon-contacts gx-fs-xxl gx-mr-2`} style={{fontSize: 40}}/>
                <Link to="/main/dashboard/identities">
                   <i className="icon icon-long-arrow-right gx-fs-xxl arrow"/>
                   </Link>
-                <AddVisit open={addVisitState} contact={{
-                    'id': 1,
-                    'dni': '',
-                    'company_name': '',
-                    'host_name': '',
-                    'procedure': '',
-                  }} onSaveVisit={this.onSaveVisit}
-                      onVisitClose={this.onVisitClose}/>
               </div>
               <h2 className="gx-mb-0 gx-text-white">New Admission</h2>
             </Widget>
           </Col>
 
-          <Col xl={6} lg={12} md={12} sm={12} xs={24}>
+          <Col xl={6} lg={12} md={12} sm={12} xs={12}>
             <Widget styleName="gx-blue-cyan-gradient gx-text-white gx-card-1367-p">
               <div className="gx-flex-row gx-justify-content-between gx-mb-2">
                 <i className={`icon icon-search gx-fs-xxl gx-mr-2`} style={{fontSize: 40}}/>
-                
-                  <i className="icon icon-long-arrow gx-fs-xxl arrow"/>
-               
-              
+                <Link to="/main/dashboard/search">
+                  <i className="icon icon-long-arrow gx-fs-xxl arrow"/></Link>
               </div>
               <h2 className="gx-mb-0 gx-text-white">Search</h2>
+            </Widget>
+          </Col>
+          <Col xl={6} lg={12} md={12} sm={12} xs={12}>
+            <Widget styleName="gx-blue-cyan-gradient gx-text-white gx-card-1367-p">
+              <div className="gx-flex-row gx-justify-content-between gx-mb-2">
+                <i className={`icon icon-transfer gx-fs-xxl gx-mr-2`} style={{fontSize: 40}}/>
+                <Link to="/main/dashboard/search">
+                  <i className="icon icon-long-arrow gx-fs-xxl arrow"/></Link>
+              </div>
+              <h2 className="gx-mb-0 gx-text-white">Export</h2>
             </Widget>
           </Col>
 

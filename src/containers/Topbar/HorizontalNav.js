@@ -43,17 +43,23 @@ const HorizontalNav = () => {
               </Link>
           </Menu.Item>
 
-          <Menu.Item key="main/dashboard/search data">
-              <Link to="">
+          <Menu.Item key="/identities">
+              <Link to="/main/dashboard/identities">
                 <i className="icon icon-contacts"/>
                   Admission
               </Link>
           </Menu.Item>
 
-          <Menu.Item key="main/dashboard/search data">
-              <Link to="">
-                <i className="icon icon-home"/>
-                  Collage
+          <Menu.Item key="/search">
+              <Link to="/main/dashboard/search">
+                <i className="icon icon-search"/>
+                  Search
+              </Link>
+          </Menu.Item>
+          <Menu.Item key="/dataexport">
+              <Link to="/main/dashboard/dataexport">
+                <i className="icon icon-transfer"/>
+                  Export
               </Link>
           </Menu.Item>
       {/* <SubMenu className={getNavStyleSubMenuClass(navStyle)} key="main"
