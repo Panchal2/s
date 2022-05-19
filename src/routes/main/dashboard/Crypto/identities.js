@@ -95,7 +95,7 @@ const Identity =(props) => {
               </Row>
                 <Col lg={24}>
                   
-                  <FormItem label="Admission Type" >
+                  <FormItem label="Admission Type">
                     {getFieldDecorator('AdmisionType', {
                     rules: [
                         {required: true, message: 'Please select Admission Type!'},
@@ -115,7 +115,7 @@ const Identity =(props) => {
                   <Col lg={24}>
                   <FormItem label="Name">
                     {getFieldDecorator('fname', {
-                      initialValue: "",
+                      
                       rules: [{
                         required: true, message: 'Enter Name',
                       }],
